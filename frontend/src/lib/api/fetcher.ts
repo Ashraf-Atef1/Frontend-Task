@@ -12,7 +12,6 @@ const endpoints = {
 const axiosInstance = axios.create({
 	baseURL: process.env.API_BASE_URL,
 });
-console.log("API_BASE_URL:", process.env.API_BASE_URL);
 
 const fetcher = async (
 	endpoint: keyof typeof endpoints,
