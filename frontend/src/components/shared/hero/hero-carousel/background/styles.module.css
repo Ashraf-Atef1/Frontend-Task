@@ -1,0 +1,23 @@
+.slideContainer {
+	position: absolute;
+	inset: 0;
+	transition: opacity 500ms ease-in-out;
+}
+
+.slideActive {
+	opacity: 1;
+}
+
+.slideInactive {
+	opacity: 0;
+}
+
+.backgroundOverlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		rgba(75, 38, 21, 0.28) 0%,
+		rgba(75, 38, 21, 0.68) 100%
+	);
+}

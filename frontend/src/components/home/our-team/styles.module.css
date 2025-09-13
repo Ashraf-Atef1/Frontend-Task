@@ -1,0 +1,238 @@
+.ourTeamSection {
+	padding: 4rem 0;
+	background-color: #f3f3f3;
+}
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+	.container {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		padding: 0 2rem;
+	}
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.title {
+	font-size: 2.25rem;
+	font-weight: bold;
+	color: var(--primary);
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+	.title {
+		font-size: 3rem;
+	}
+}
+
+.description {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: #6b7280;
+	max-width: 42rem;
+	margin: 0 auto;
+	line-height: 1.75;
+}
+
+.rtl .title,
+.rtl .description {
+	text-align: right;
+}
+
+.teamGrid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.teamGrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 1024px) {
+	.teamGrid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.scrollContainer {
+	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.scrollContainer::-webkit-scrollbar {
+	display: none;
+}
+
+.teamSlider {
+	display: flex;
+	gap: 2rem;
+	transition: transform 0.3s ease-in-out;
+	min-width: max-content;
+}
+
+.memberCard {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+		0 4px 6px -2px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	min-width: 300px;
+	flex-shrink: 0;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.memberCard:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.imageContainer {
+	position: relative;
+	overflow: hidden;
+	height: 280px;
+}
+
+.memberImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+}
+
+.memberCard:hover .memberImage {
+	transform: scale(1.1);
+}
+
+.memberInfo {
+	padding: 1.5rem;
+}
+
+.memberName {
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+}
+
+.memberPosition {
+	color: #6b7280;
+	margin-bottom: 1rem;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.socialLinks {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+}
+
+.socialLink {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #6b7280;
+	transition: all 0.3s ease;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.socialLink:hover {
+	transform: translateY(-2px);
+	color: white;
+}
+
+.whatsapp:hover {
+	background-color: #10b981;
+}
+
+.phone:hover {
+	background-color: #3b82f6;
+}
+
+.email:hover {
+	background-color: #ef4444;
+}
+
+.linkedin:hover {
+	background-color: #2563eb;
+}
+
+.navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.navButton {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #6b7280;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.navButton:hover:not(:disabled) {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	background-color: #3b82f6;
+	color: white;
+}
+
+.navButton:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+	.teamGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.title {
+		font-size: 1.875rem;
+	}
+
+	.memberCard {
+		min-width: 280px;
+	}
+
+	.imageContainer {
+		height: 240px;
+	}
+}

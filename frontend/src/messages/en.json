@@ -1,0 +1,82 @@
+{
+	"lang": "en",
+	"header": {
+		"home": "Home",
+		"about": "About Us",
+		"services": "Services",
+		"web-development": "Web Development",
+		"mobile-development": "Mobile Development",
+		"ui-ux-design": "UI/UX Design",
+		"blogs": "Blogs",
+		"our-team": "Our Team",
+		"contact-us": "Contact Us",
+		"search_placeholder": "Search ...",
+		"bookAppointment": "Book Appointment"
+	},
+	"our_team": {
+		"title": "Our Team",
+		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+	},
+	"our_clients": {
+		"title": "What our clients are saying",
+		"description": "Our clients range from individual investors, to local, international as well as fortune 500 companies. Our clients range from individual investors, to local, international as well as fortune 500 companies.",
+		"clientsTitle": "Trusted by Leading Companies"
+	},
+	"search_result": {
+		"readMore": "Read more",
+		"back": "Back",
+		"title": "Search Results",
+		"frame": "Frame",
+		"team": "Team",
+		"service": "Service",
+		"noResults": "No results found",
+		"noResultsDescription": "Try adjusting your search terms or browse our services.",
+		"for": "for",
+		"nextPage": "Next Page",
+		"prevPage": "Previous page",
+		"of": "of"
+	},
+	"service_details": {
+		"back": "Back",
+		"title": "Legal Consultation Services",
+		"introduction": "Law Firm is one of the leading legal offices that offer exceptional advisory services for both individuals and companies. Our mission is to provide comprehensive and specialized legal support to meet our clients&apos; needs and offer the best legal solutions in various cases and legal fields. we provide our legal consultations services as a follow:",
+		"card_1_title": "General Legal Consultations",
+		"card_1_description": "At Law Firm, we provide comprehensive legal consultations covering all legal aspects that our clients may encounter in their daily lives or business activities. Our goal is to offer accurate legal advice based on a deep understanding of local and international laws.",
+		"card_2_title": "Corporate Legal Consultations",
+		"card_2_description": "We at the Law Firm understand the importance of legal consultations for companies in building and enhancing their businesses.",
+		"card_2_subtitle": "Our advisory services about:",
+		"card_2_list_1": "Establishing and registering companies.",
+		"card_2_list_2": "All kinds of contracts and agreements.",
+		"card_2_list_3": "Commercial disputes.",
+		"card_2_list_4": "Compliance with local and international laws and regulations.",
+		"card_3_title": "Individual Legal Consultations",
+		"card_3_description": "Law Firm offers customized advisory services for individuals, including:",
+		"card_3_list_1": "Family issues such as divorce, alimony, and custody.",
+		"card_3_list_2": "Real estate matters like buying, selling, and renting properties.",
+		"card_3_list_3": "Employment issues such as hiring and wrongful termination.",
+		"card_3_list_4": "Criminal cases and defending personal rights.",
+		"conclusion": "At Law Firm, we aim to provide the best legal services to ensure your rights and offer effective legal solutions. Contact us today to receive professional and comprehensive legal consultation."
+	},
+	"footer": {
+		"subscribe": {
+			"placeholder": "Email",
+			"button": "Subscribe",
+			"successMessage": "Thank you for subscribing!",
+			"errorMessage": "An error occurred. Please try again.",
+			"duplicateMessage": "You are already subscribed.",
+			"invalidEmailMessage": "Please enter a valid email address.",
+			"requiredMessage": "Email is required.",
+			"successMessageToaster": "You have successfully subscribed to our newsletter.",
+			"errorMessageToaster": "An error occurred while subscribing. Please try again."
+		},
+		"contacts": "Contacts",
+		"copyright": "© 2025 IO Tech. All rights reserved.",
+		"Services": "Services",
+		"social-responsibility": "Social Responsibility",
+		"our-services": "Our Services",
+		"company": "Company",
+		"about": "About Us",
+		"our-strategy": "Our Strategy",
+		"our-advantages": "Our Advantages"
+	}
+}

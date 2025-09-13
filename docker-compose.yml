@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: io-tech-backend
+    ports:
+      - "1337:1337"
+    environment:
+      # Server
+      - HOST=0.0.0.0
+      - PORT=1337
+
+      # Secrets
+      - APP_KEYS=6QgWz6vHG784lHGqZPxhLw==,ff55Tq/pxc3GiSdMYDurDA==,e3YWvnOuLL25WCE0euMMAQ==,l3MoPCCZyxlb3n2uynH6qw==
+      - API_TOKEN_SALT=DVV8Tythyw5cBXMDyIPPHw==
+      - ADMIN_JWT_SECRET=DPW60fcyWzMsyHwwAtRM3w==
+      - TRANSFER_TOKEN_SALT=YWYs5DQx2ZvS3d5xHSPGXA==
+      - ENCRYPTION_KEY=ukT6+FPYnOQRynMOg5oIEw==
+
+      # Database
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_SSL=false
+      - DATABASE_FILENAME=/app/.tmp/data.db
+      - JWT_SECRET=VQ6ewCQT5XMaytu2EPhruQ==
+    volumes:
+      - backend_uploads:/app/public/uploads
+      - backend_db:/app/.tmp
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1337/admin/auth/login"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: io-tech-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - API_BASE_URL=http://backend:1337
+    depends_on:
+      backend:
+        condition: service_healthy # This is the key change
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+
+volumes:
+  backend_uploads:
+    driver: local
+  backend_db:
+    driver: local

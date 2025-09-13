@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+      target: development
+    container_name: io-tech-backend-dev
+    ports:
+      - "1337:1337"
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=1337
+      - APP_KEYS=dev-key-1,dev-key-2
+      - API_TOKEN_SALT=dev-api-token-salt
+      - ADMIN_JWT_SECRET=dev-admin-jwt-secret
+      - TRANSFER_TOKEN_SALT=dev-transfer-token-salt
+      - JWT_SECRET=dev-jwt-secret
+      - ENCRYPTION_KEY=dev-encryption-key
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - backend_uploads:/app/public/uploads
+      - backend_db:/app/.tmp
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+      target: development
+    container_name: io-tech-frontend-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - API_BASE_URL=http://backend:1337
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  backend_uploads:
+    driver: local
+  backend_db:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge
