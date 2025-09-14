@@ -19,11 +19,7 @@ export default function NavButtons({
 					className={`${styles.navigationButton} ${styles.right}`}
 					aria-label={"Next slide"}
 				>
-					{locale === "ar" ? (
-						<ChevronRight className="w-6 h-6" />
-					) : (
-						<ChevronLeft className="w-6 h-6" />
-					)}
+					<ChevronRight className="w-6 h-6" />
 				</button>
 
 				<button
@@ -31,11 +27,7 @@ export default function NavButtons({
 					className={`${styles.navigationButton} ${styles.left}`}
 					aria-label={"Previous slide"}
 				>
-					{locale === "ar" ? (
-						<ChevronLeft className="w-6 h-6" />
-					) : (
-						<ChevronRight className="w-6 h-6" />
-					)}
+					<ChevronLeft className="w-6 h-6" />
 				</button>
 			</>
 		);
