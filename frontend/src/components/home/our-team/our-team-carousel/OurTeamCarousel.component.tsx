@@ -30,7 +30,7 @@ export default function OurTeamCarousel({ members }: IOurTeamCarouselProps) {
 					stopOnInteraction: true,
 				}),
 			]}
-			className="w-ful flex justify-center p-10"
+			className="p-10"
 		>
 			<CarouselContent>
 				{members.map((member) => (
